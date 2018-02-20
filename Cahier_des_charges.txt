@@ -1,0 +1,21 @@
+Equipe : Vincent DEVULDER, Corentin BEL, Thomas PEYRAT, Romain LEBRUN
+----------------------------------------------------------------------------------------
+
+
+
+Apprendre à un ordinateur à jouer au billard, un projet en Etapes successives :
+
+
+	Etape 1 : modéliser un jeu de billard en 2D sans prise en comptes des effets.
+	(se serait déjà pas mal)
+
+	Etape 2 : Mettre en place un algorithme génétique pour sélectionner un tir de casse parfait 
+	(tir de casse = premier tir = les billes sont en triangle et la blanche au centre | pour l'algorithme génétique on travail sur des populations de Tirs).
+
+	Etape 3 : modéliser un réseau de neurone adapté au jeu de billard et y appliqué l'algorithme génétique de 2 pour obtenir une IA capable de jouer au billard.
+
+	Etape 4 : nommer l'IA "Gentleman1" - rajouter de la musique de jazz en fond - aller à la Kfet enregistrer les bruits du billard pour les effets sonores - boire des bières.
+
+
+
+----------------------------------------------------------------------------------------
