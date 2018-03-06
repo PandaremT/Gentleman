@@ -1,3 +1,3 @@
-public interface Bille {
-	
+public class Bille {
+		
 }
