@@ -1,12 +1,12 @@
 import java.awt.*;
 import javax.swing.*;
 
-public class FenetreBillard extends JFrame {
+public class FenetreMenu extends JFrame {
 	
 	private Panel mainPanel;
 	
-	public FenetreBillard () {
-		super ("Billard");
+	public FenetreMenu () {
+		super ("Menu");
 		
 		this.setSize(new Dimension(1200, 600)); 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //procedure normal de fermeture

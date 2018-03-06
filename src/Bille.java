@@ -1,7 +1,3 @@
-public class Bille {
-	
-	public Bille () {
-		
-	}
+public interface Bille {
 	
 }
