@@ -1,32 +1,34 @@
 public class Tir {
 	
-	private int normeV;
-	private double[] directionV;
+	final private int MODE_RADIAN = 0;
+	final private int MODE_DEGREE = 1;
 	
+	private double [] force;
 	
-	//construit un tir aleatoire
 	public Tir () {
-		
-		directionV = new int[2];
-		this.randomCreation ();
+		force = new double [2];
+		force[0] = 0;
+		force[1] = 0;
 	}
 	
-	// construit un tir avec les parametres fournis
-	public Tir (int normeV, double[] directionV) {
+	public Tir (double angle, double norme) {
+		force = new double [2];
+		force[0] = 0;
+		force[1] = 0;
 		
-		this.normeV = normeV;
-		this.directionV = directionV;
+		this.setForce(angle, norme);
 	}
 	
-	// donne des caracteristique aleatoire au tir courant
-	private void randomCreation () {
-		
-		normeV = (int) 100*Math.random();
-		
-		double directionX = Math.random();
-		double directionY = Math.sqrt((1-(directionX*directionX)));
-		if (Math.random()<0.5) {directionY = -directionY}
-		
-		directionV = {directionX , directionY};
+	public void setForce (double[] force){
+		this.force=force;
+	}
+	
+	public void setForce (double angle, double norme) {
+		force [0] = norme*Math.cos(angle);
+		force [1] = norme*Math.sin(angle);
+	}
+	
+	public double[] getForce () {
+		return force;
 	}
 }
