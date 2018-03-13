@@ -9,7 +9,7 @@ public class Joueur {
 	public Joueur (String nickname, int couleur) {
 		this.nickname = nickname;
 		this.couleur = couleur;
-		
+		if (couleur!=0 && couleur!=1) {couleur = 3;}
 	}
 	
 	
