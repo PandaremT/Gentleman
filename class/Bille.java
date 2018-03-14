@@ -55,25 +55,64 @@ public class Bille {
 										//Le code pour gerer les interfaces graphiques
 										// des billes doit etre placé ici
 
+									//Condition d'arret de déplacement:
 										if (Vitesse [1][i]==0 && Vitesse[2][i]==0) {
 											PxProvisoire= Position[1][i];
 											PyProvisoire= Position[2][i];
 											break;
 										}
+										//Bille rentre dans Bac:
+										if (Position [1][i]==getHautGauche()){
+											Disparaitre();
+											break;
+										}
+										if (Position [1][i]==getHautMilieu()){
+											Disparaitre();
+											break;
+										}
+										if (Position [1][i]==getHautDroite()){
+											Disparaitre();
+											break;
+										}
+										if (Position [1][i]==getBasGauche()){
+											Disparaitre();
+											break;
+										}
+										if (Position [1][i]==getBasMilieu()){
+											Disparaitre();
+											break;
+										}
+										if (Position [1][i]==getBasDroite()){
+											Disparaitre();
+											break;
+										}
+
 									}
 									if (Vitesse [1][i]==0 && Vitesse[2][i]==0) break;
 							}
 			//Réinitialisation des matrices temporelles, en gardant la derniere position dans Position[:][0]
 							for (int i=0; i<Niter; i++){
 									for(int j=1;j<=2;j++){
-									Acceleration[j][i]=0;
-									Vitesse[j][i]=0;
-									Position[j][i]=0;
+										Acceleration[j][i]=0;
+										Vitesse[j][i]=0;
+										Position[j][i]=0;
 									}
 							}
 
 							Position[1][0]= PxProvisoire;
 							Position[2][0]= PyProvisoire;
 
+		}
+
+
+		public void Disparaitre(){
+			for (int i=0; i<Niter; i++){
+					for(int j=1;j<=2;j++){
+						Acceleration[j][i]=0;
+						Vitesse[j][i]=0;
+						Position[j][i]=0;
+					}
+			}
+			//Appeler la methode dans le jeux pour la faire disparaitre de la linked, inteerface...
 		}
 }
