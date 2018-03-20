@@ -5,15 +5,15 @@ import java.util.LinkedList;
 
 public class FenetreInscrire extends JFrame {
 	
-	JLabel n;
-	JLabel m;
-	JButton co;
-	JTextField en;
-	JTextField em;
-	JPanel tou;
-	JLabel annee;
-	JTextField age;
-	JLabel ima;
+	private JLabel n;
+	private JLabel m;
+	private JButton co;
+	public JTextField en;
+	public JTextField em;
+	private JPanel tou;
+	private JLabel annee;
+	private JTextField age;
+	private JLabel ima;
 	
 	
 	public  FenetreInscrire(){
@@ -38,7 +38,7 @@ public class FenetreInscrire extends JFrame {
 		tou.setBackground(Color.RED);
 		ImageIcon Im = new ImageIcon( "salut.jpg");
 		ima = new JLabel("BIENVENUE",Im,JLabel.CENTER);
-		
+		co.addActionListener(new inscrireTxt());
 		
 
 			
@@ -64,6 +64,10 @@ public class FenetreInscrire extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
 		}
+		
+		/*public String getEn() {
+			return (String)(en);
+		}*/
         
 }
 
