@@ -8,7 +8,7 @@ public class Audio extends Thread{
 	SourceDataLine line;
 
 	public void run(){
-        File fichier = new File("yoga-1.wav");
+        File fichier = new File("zik.wav");
         try {
         AudioFileFormat format = AudioSystem.getAudioFileFormat(fichier);
 		} catch (UnsupportedAudioFileException el) {
